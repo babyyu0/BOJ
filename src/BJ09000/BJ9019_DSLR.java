@@ -6,16 +6,10 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class BJ9019_DSLR {
-    private static class Logic {
-        Logic(int num) { this.num = num; this.command = ""; }
-        Logic(int num, String command) { this.num = num; this.command = command; }
-        int num;
-        String command;
-    }
-    private static int T, chNum, result;
-    private static String LR;
-    private static Logic curLogic;
-    private static Queue<Logic> queue;
+    private static int T, curIndex, resIndex;
+    private static String iStr, resStr;
+    private static String[] commands;
+    private static Queue<Integer> queue;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,11 +22,16 @@ public class BJ9019_DSLR {
 
         for (int test_case = 0; test_case < T; test_case++) {
             queue.clear();
+            commands = new String[10000];
             st = new StringTokenizer(br.readLine());
-            queue.add(new Logic(Integer.parseInt(st.nextToken())));
-            result = Integer.parseInt(st.nextToken());
 
-            sb.append(findDS()).append("\n");  // 명령어 찾는 함수 호출
+            curIndex = Integer.parseInt(st.nextToken());
+            commands[curIndex] = ".";
+            queue.add(curIndex);
+            resIndex = Integer.parseInt(st.nextToken());
+            resStr = "0".repeat(4 - Integer.toString(resIndex).length()) + resIndex;
+
+            sb.append(commands[findCommand()].replace(".", "")).append("\n");  // 명령어 찾는 함수 호출
         }
 
         bw.append(sb.toString());
@@ -41,84 +40,69 @@ public class BJ9019_DSLR {
         br.close();
     }
 
-    private static String findDS() {
-        while(true) {
-            curLogic = queue.poll();
-            LR = findLR(Integer.toString(curLogic.num), Integer.toString(result), "", "");
-            if(LR != null) {
-                return curLogic.command + LR;
+    private static int tmp;
+    private static int findCommand() {
+        while(!queue.isEmpty()) {
+            curIndex = queue.poll();
+            // System.out.println("현재 값 : " + curIndex);
+
+            tmp = doD(curIndex);
+            if(tmp == resIndex) {  // D 명령어
+                commands[tmp] = commands[curIndex] + "D";
+                return tmp;
+            } else if (commands[tmp] == null) {
+                commands[tmp] = commands[curIndex] + "D";
+                queue.add(tmp);
             }
 
-            chNum = doD(curLogic.num);
-            if(compare(chNum)) {
-                return curLogic.command + "D";
-            } else {
-                queue.add(new Logic(chNum, curLogic.command + "D"));
+            tmp = doS(curIndex);
+            if(tmp == resIndex) {  // S 명령어
+                commands[tmp] = commands[curIndex] + "S";
+                return tmp;
+            } else if (commands[tmp] == null) {
+                commands[tmp] = commands[curIndex] + "S";
+                queue.add(tmp);
             }
 
-            chNum = doS(curLogic.num);
-            if(compare(chNum)) {
-                return curLogic.command + "S";
-            } else {
-                queue.add(new Logic(chNum, curLogic.command + "S"));
+            tmp = doL(curIndex);
+            if(tmp == resIndex) {  // L 명령어
+                commands[tmp] = commands[curIndex] + "L";
+                return tmp;
+            } else if (commands[tmp] == null) {
+                commands[tmp] = commands[curIndex] + "L";
+                queue.add(tmp);
             }
-        }
-    }
 
-    private static String tmp;
-    private static String findLR(String num, String result, String left, String right) {
-        if(!isLR(num, result, 0)) return null;
-
-        tmp = num;
-        while(!tmp.equals(result)) {
-            System.out.println(tmp);
-            tmp = Integer.toString(doL(tmp));
-            left += "L";
-        }
-
-        tmp = num;
-        while(!tmp.equals(result)) {
-            System.out.println(tmp);
-            tmp = Integer.toString(doR(tmp));
-            right += "R";
-        }
-
-        return (left.length() < right.length())? left : right;
-    }
-
-    private static boolean[] visited;
-    private static boolean isLR(String num, String result, int cnt) {
-        if(num.length() != result.length()) return false;
-
-        visited = new boolean[num.length()];
-        for (int i = 0; i < num.length(); i++) {
-            for (int j = 0; j < result.length(); j++) {
-                if(!visited[j] && num.charAt(i) == result.charAt(j)) {
-                    cnt++;
-                    visited[j] = true; break;
-                }
+            tmp = doR(curIndex);
+            if(tmp == resIndex) {  // R 명령어
+                commands[tmp] = commands[curIndex] + "R";
+                return tmp;
+            } else if (commands[tmp] == null) {
+                commands[tmp] = commands[curIndex] + "R";
+                queue.add(tmp);
             }
         }
 
-        return cnt == num.length();
+        return -1;
     }
 
-    private static int doD(long num) {
-        return (int) (num * 2L % 10000L);
+    private static int doD(int i) {
+        return (i * 2) % 10000;
     }
 
-    private static int doS(int num) {
-        return (num != 0)? num - 1 : 9999;
+    private static int doS(int i) {
+        return (i == 0)? 9999 : i - 1;
     }
 
-    private static int doL(String num) {
-        return Integer.parseInt(num.substring(1, num.length()) + num.substring(0, 1));
-    }
-    private static int doR(String num) {
-        return Integer.parseInt(num.substring(num.length() - 1, num.length()) + num.substring(0, num.length() - 1));
-    }
+    private static int doL(int i) {
+        iStr = "0".repeat(4 - Integer.toString(i).length()) + i;
+        //System.out.println(iStr + "과 " + resStr + "을 비교");
 
-    private static boolean compare(int num) {
-        return result == num;
+        return Integer.parseInt(iStr.substring(1, iStr.length()) + iStr.substring(0, 1));
+    }
+    private static int doR(int i) {
+        iStr = "0".repeat(4 - Integer.toString(i).length()) + i;
+        // System.out.println(iStr + "과 " + resStr + "을 비교");
+        return Integer.parseInt(iStr.substring(iStr.length() - 1, iStr.length()) + iStr.substring(0, iStr.length() - 1));
     }
 }
