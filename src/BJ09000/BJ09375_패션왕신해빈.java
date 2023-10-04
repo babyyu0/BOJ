@@ -26,32 +26,19 @@ public class BJ09375_패션왕신해빈 {
                 cloth = st.nextToken();
                 category = st.nextToken();
 
-                map.put(category, map.getOrDefault(category, 0) + 1);
+                map.put(category, map.getOrDefault(category, 1) + 1);
             }
 
             clothes = map.values().toArray(new Integer[0]);
-            sum = 0;
-            calNum(-1, 0, clothes.length, 1);
-            sb.append(sum + N).append("\n");
+            int sum = 1;
+            for (int i = 0; i < clothes.length; i++) {
+                sum *= clothes[i];
+            }
+            sb.append(sum - 1).append("\n");
         }
         bw.append(sb.toString());
         bw.flush();
         bw.close();
         br.close();
-    }
-
-    private static int sum = 0;
-    private static void calNum(int start, int count, int max, int res) {  // 경우의 수 뽑기
-        if(count == max) {
-            System.out.println((res) + "더하기");
-            sum += res;
-            return;
-        }
-        for (int i = start + 1; i < clothes.length; i++) {
-            System.out.println((res) + "더하기");
-            sum += res;
-            calNum(i, count + 1, max, res * clothes[i]);
-        }
-
     }
 }
