@@ -3,7 +3,7 @@ package BJ01000;
 import java.io.*;
 import java.util.*;
 
-public class BJ1167_트리의지름 {
+public class BJ01167_트리의지름 {
     private static class Edge {
         protected Edge(int node, long dist) {
             this.node = node; this.dist = dist;
