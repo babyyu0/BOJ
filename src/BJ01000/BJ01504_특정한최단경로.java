@@ -13,12 +13,22 @@ import java.util.StringTokenizer;
 public class BJ01504_특정한최단경로 {
 
     private static class Node {
-        protected Node(int index, int depth) {
+        protected Node(int index, long depth) {
             this.index = index; this.depth = depth;
         }
-        int index, depth;
+        int index;
+        long depth;
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "index=" + index +
+                    ", depth=" + depth +
+                    '}';
+        }
     }
     private static int N;
+    private static final long MAX_VALUE = 200000 * 1000;
     private static PriorityQueue<Node> queue;
     private static int[][] edge;
 
@@ -49,35 +59,43 @@ public class BJ01504_특정한최단경로 {
         int u = Integer.parseInt(st.nextToken());  // 지나야하는 노드 1 번호
         int v = Integer.parseInt(st.nextToken());  // 지나야하는 노드 2 번호
 
-        int fromStartToU = bfs(1, u, new boolean[N + 1], Integer.MAX_VALUE);
-        int fromStartToV = bfs(1, v, new boolean[N + 1], Integer.MAX_VALUE);
-        int fromUToV = bfs(u, v, new boolean[N + 1], Integer.MAX_VALUE);
-        int fromUToEnd = bfs(u, N, new boolean[N + 1], Integer.MAX_VALUE);
-        int fromVToEnd = bfs(v, N, new boolean[N + 1], Integer.MAX_VALUE);
+        long fromStartToU = bfs(1, u, new boolean[N + 1], MAX_VALUE);
+        System.out.println("fromStartToU: " + fromStartToU);
+        long fromStartToV = bfs(1, v, new boolean[N + 1], MAX_VALUE);
+        System.out.println("fromStartToV: " + fromStartToV);
+        long fromUToV = bfs(u, v, new boolean[N + 1], MAX_VALUE);
+        System.out.println("fromUToV: " + fromUToV);
+        long fromUToEnd = bfs(u, N, new boolean[N + 1], MAX_VALUE);
+        System.out.println("fromUToEnd: " + fromUToEnd);
+        long fromVToEnd = bfs(v, N, new boolean[N + 1], MAX_VALUE);
+        System.out.println("fromVToEnd: " + fromVToEnd);
 
-        int U = Integer.MAX_VALUE, V = Integer.MAX_VALUE;
-        if(fromStartToU < fromStartToV) {
+        long U = MAX_VALUE, V = MAX_VALUE;
+        // if(fromStartToU < fromStartToV) {
             U = Math.min(fromUToV + fromUToEnd, (fromUToV * 2) + fromVToEnd);
-        }
-        else {
+            System.out.println("U: " + U);
+        // }
+        // else {
             V = Math.min(fromUToV + fromVToEnd, (fromUToV * 2) + fromUToEnd);
-        }
+            System.out.println("V: " + V);
+        // }
 
-        System.out.println(Math.min(U, V) == Integer.MAX_VALUE? 0 : Math.min(U, V));
+        System.out.println(Math.min(U, V) >= MAX_VALUE? 0 : Math.min(U, V));
 
     }
 
-    private static int bfs(int startNode, int endNode, boolean[] visited, int min) {
+    private static long bfs(int startNode, int endNode, boolean[] visited, long min) {
         queue.clear();
         queue.add(new Node(startNode, 0));
         visited[startNode] = true;
 
-        int curDepth; Node curNode;
+        long curDepth; Node curNode;
         while(!queue.isEmpty()) {
+            System.out.println(queue);
             curNode = queue.poll();
             for (int i = 1; i <= N; i++) {
                 curDepth = curNode.depth + edge[curNode.index][i];
-                if(visited[i]) continue;  // 방문한 경우 다시 지나지 않기
+                if(edge[curNode.index][i] == 0 || visited[i]) continue;  // 방문한 경우 다시 지나지 않기
                 if(i == endNode) {  // 끝점일 경우
                     min = Math.min(min, curDepth);  // 값 비교
                     continue;
@@ -88,6 +106,6 @@ public class BJ01504_특정한최단경로 {
         }
 
         // System.out.println(startNode + "부터 " + endNode + "까지의 최단 경로 : " + min);
-        return min;
+        return min == 0 ? MAX_VALUE : min;
     }
 }
