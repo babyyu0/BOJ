@@ -5,7 +5,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ1012_유기농배추 {
+public class BJ01012_유기농배추 {
     private static class Pos {
         Pos(int r, int c) {
             this.r = r; this.c = c;

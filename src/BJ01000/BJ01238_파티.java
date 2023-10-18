@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BJ1238_파티 {
+public class BJ01238_파티 {
     private static class Node {
         protected Node(int index, int depth) {
             this.index = index; this.depth = depth;
