@@ -4,30 +4,18 @@ import java.io.*;
 import java.util.*;
 
 public class BJ01865_웜홀 {
-
-    private static class Node {
-        protected Node(int index, long depth) {
-            this.index = index;
-            this.depth = depth;
-        }
-        int index;
-        long depth;
-    }
-    private static final int MAX_EDGE = Integer.MAX_VALUE, MIN_EDGE = Integer.MIN_VALUE;
+    private static final int MAX_EDGE = 10001;
     private static int T;  // 테스트케이스
     private static int N, M, W; // 노드, 간선, 웜홀의 개수
     private static int[][] edge;
     private static long[][] dist;
-    private static Queue<Node> queue;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st;
-        queue = new ArrayDeque<>();
 
-        boolean flag;
         T = Integer.parseInt(br.readLine());
         for (int test_case = 0; test_case < T; test_case++) {
             st = new StringTokenizer(br.readLine());
@@ -71,31 +59,30 @@ public class BJ01865_웜홀 {
     }
 
     private static String findDist() {
-        boolean flag;
-        for (int i = 0; i <= N; i++) {  // 해당 노드에서 시작
-            flag = false;
-            goToEnd(i);
-            for (int j = 1; j <= N; j++) {
-                if (dist[i][j] != MAX_EDGE && dist[j][i] != MAX_EDGE && dist[i][j] + dist[j][i] < 0) {
-                    flag = true;
-                    break;
-                }
+        for (int i = 1; i <= N; i++) {  // 해당 노드에서 시작
+            for (int j = 0; j < N; j++) {
+                dist[i][i] = 0;
+                if(!goToEnd(i)) break;
             }
-            // System.out.println();
-            if(flag) return "YES";
+            if(goToEnd(i)) return "YES";
         }
 
         return "NO";
     }
 
-    private static void goToEnd(int startNode) {
-        dist[startNode][startNode] = 0;  // 시작점과 끝점이 같을 경우에 대한 0 처리
-
+    private static boolean goToEnd(int startNode) {
+        boolean flag = false;
+        long curDepth;
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
-                if (edge[i][j] == MAX_EDGE || dist[startNode][j] < dist[startNode][i] + edge[i][j]) continue;
-                dist[startNode][j] = dist[startNode][i] + edge[i][j];
+                curDepth = dist[startNode][i] + edge[i][j];
+                if(dist[startNode][j] <= curDepth) continue;
+                flag = true;
+                dist[startNode][j] = curDepth;
             }
         }
+        // System.out.println(startNode + "부터의 정점: " + Arrays.toString(dist[startNode]));
+
+        return flag;
     }
 }
