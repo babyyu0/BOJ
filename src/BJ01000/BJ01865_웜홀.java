@@ -4,6 +4,15 @@ import java.io.*;
 import java.util.*;
 
 public class BJ01865_웜홀 {
+
+    private static class Node {
+        protected Node(int index, long depth) {
+            this.index = index;
+            this.depth = depth;
+        }
+        int index;
+        long depth;
+    }
     private static final int MAX_EDGE = Integer.MAX_VALUE, MIN_EDGE = Integer.MIN_VALUE;
     private static int T;  // 테스트케이스
     private static int N, M, W; // 노드, 간선, 웜홀의 개수
@@ -21,7 +30,6 @@ public class BJ01865_웜홀 {
         boolean flag;
         T = Integer.parseInt(br.readLine());
         for (int test_case = 0; test_case < T; test_case++) {
-            flag = false;
             st = new StringTokenizer(br.readLine());
             N = Integer.parseInt(st.nextToken());  // 노드의 개수
             M = Integer.parseInt(st.nextToken());  // 간선의 개수
@@ -41,8 +49,8 @@ public class BJ01865_웜홀 {
                 s = Integer.parseInt(st.nextToken());  // 시작점
                 e = Integer.parseInt(st.nextToken());  // 끝점
 
-                dist[s][e] = Math.min(dist[s][e], Integer.parseInt(st.nextToken()));  // 거리 받기
-                dist[e][s] = dist[s][e]; // 반대 방향에도 거리 삽입
+                edge[s][e] = Math.min(edge[s][e], Integer.parseInt(st.nextToken()));  // 거리 받기
+                edge[e][s] = edge[s][e]; // 반대 방향에도 거리 삽입
             }
 
             // 단방향 그래프 (웜홀)
@@ -50,21 +58,10 @@ public class BJ01865_웜홀 {
                 st = new StringTokenizer(br.readLine());
                 s = Integer.parseInt(st.nextToken());  // 시작점
                 e = Integer.parseInt(st.nextToken());  // 끝점
-                dist[s][e] = Integer.parseInt("-" + st.nextToken());  // 거리 받기
+                edge[s][e] = Integer.parseInt("-" + st.nextToken());  // 거리 받기
             }
 
-            findDist();
-
-            for (int i = 1; i <= N; i++) {
-                for (int j = 1; j < N; j++) {
-                    if (dist[i][j] != MAX_EDGE && dist[j][i] != MAX_EDGE && dist[i][j] + dist[j][i] < 0) {
-                        flag = true;
-                        break;
-                    }
-                }
-            }
-
-            sb.append((flag) ? "YES" : "NO").append("\n");
+            sb.append(findDist()).append("\n");
         }
 
         bw.append(sb.toString());
@@ -73,12 +70,22 @@ public class BJ01865_웜홀 {
         br.close();
     }
 
-    private static void findDist() {
+    private static String findDist() {
+        boolean flag;
         for (int i = 0; i <= N; i++) {  // 해당 노드에서 시작
+            flag = false;
+            goToEnd(i);
             for (int j = 1; j <= N; j++) {
-                goToEnd(j);
+                if (dist[i][j] != MAX_EDGE && dist[j][i] != MAX_EDGE && dist[i][j] + dist[j][i] < 0) {
+                    flag = true;
+                    break;
+                }
             }
+            // System.out.println();
+            if(flag) return "YES";
         }
+
+        return "NO";
     }
 
     private static void goToEnd(int startNode) {
@@ -86,18 +93,9 @@ public class BJ01865_웜홀 {
 
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
-                if (dist[startNode][j] < dist[startNode][i] + dist[i][j]) continue;
-                dist[startNode][j] = dist[startNode][i] + dist[i][j];
+                if (edge[i][j] == MAX_EDGE || dist[startNode][j] < dist[startNode][i] + edge[i][j]) continue;
+                dist[startNode][j] = dist[startNode][i] + edge[i][j];
             }
-        }
-    }
-
-    private static class Node {
-        int index;
-        long depth;
-        protected Node(int index, long depth) {
-            this.index = index;
-            this.depth = depth;
         }
     }
 }
