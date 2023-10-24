@@ -23,9 +23,9 @@ public class BJ01967_트리의지름 {
 
         N = Integer.parseInt(br.readLine());  // 노드의 개수 입력 받기
 
-        if(N == 1) {
-            System.out.println(0);
-            System.exit(0);
+        if(N == 1) {  // 노드의 개수가 1일 경우
+            System.out.println(0);  // 간선이 존재하지 않으므로 0을 출력
+            System.exit(0);  // 즉시 프로젝트 종료
         }
 
         edge = new ArrayList[N + 1];
