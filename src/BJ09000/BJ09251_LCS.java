@@ -10,29 +10,29 @@ public class BJ09251_LCS {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        String[] str = new String[]{br.readLine(), br.readLine()};
+        String[] str = new String[]{" " + br.readLine().trim(), " " + br.readLine().trim()};
 
         // 한번 걸러주기
 
 
-        System.out.println(compare(str[0], str[1], 0));
+        System.out.println(Math.max(compare(str[0], str[1]), compare(str[1], str[0])));
     }
 
-    private static int compare(String str, String compareStr, int sum) {
-        int[] dist = new int[compareStr.length()];  // {index sum}
-        for (int i = 0; i < str.length(); i++) {
-            System.out.println(str.charAt(i) + " 시작");
-            // for (int j = 0; j < compareStr.length(); j++) {
-            for (int j = compareStr.length() - 1; j >= 0; j--) {
-                if( 0 <= j - 1) dist[j] = Math.max(dist[j - 1], dist[j]);
+    private static int compare(String str, String compareStr) {
+        int[][] dist = new int[str.length()][compareStr.length()];
+
+        for (int i = 1; i < str.length(); i++) {
+            // System.out.println(str.charAt(i) + " 시작");
+            for (int j = 1; j < compareStr.length();j++) {
                 if(str.charAt(i) == compareStr.charAt(j)) {
-                    if( 0 <= j - 1) dist[j] = Math.max(dist[j - 1] + 1, dist[j]);
-                    else dist[j] = 1;
+                    dist[i][j] = dist[i - 1][j - 1] + 1;
                 }
+                else dist[i][j] = Math.max(dist[i - 1][j], dist[i][j - 1]);
             }
-            System.out.println(Arrays.toString(dist));
+
+            // System.out.println(Arrays.deepToString(dist));
         }
-        return sum;
+        return dist[str.length() - 1][compareStr.length() - 1];
 
     }
 }
