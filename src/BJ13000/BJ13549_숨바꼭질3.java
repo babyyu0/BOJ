@@ -4,37 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class BJ13549_숨바꼭질3 {
-
-    private static class Location implements Comparable<Location> {
-
-        private Location(int index, int sec) {
-            this.index = index;
-            this.sec = sec;
-        }
-
-        @Override
-        public int compareTo(Location o) {
-            if (this.sec != o.sec) {
-                return Integer.compare(this.sec, o.sec);
-            }
-            return Integer.compare(Math.abs(K - this.index), Math.abs(K - o.index));
-        }
-
-        @Override
-        public String toString() {
-            return "Location{" +
-                    "index=" + index +
-                    ", sec=" + sec +
-                    '}';
-        }
-
-        int index, sec;
-    }
-
     private static int N, K;
     private static final int DIV = 100000;
     private static int[] sec;
@@ -46,50 +20,46 @@ public class BJ13549_숨바꼭질3 {
         N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
 
-        if (K <= N) {
-            System.out.println(N - K);
-            return;
-        }
-        if (K <= N * 2) {
-            System.out.println(K - N);
-            return;
-        }
-
         sec = new int[DIV + 1];
         Arrays.fill(sec, DIV);
         sec[N] = 0;
 
-        findFastest2();
+        findFastest();
         System.out.println(sec[K]);
     }
 
-    private static void findFastest2() {
-        PriorityQueue<Location> pq = new PriorityQueue<>();
-        pq.add(new Location(N, 0));
+    private static void findFastest() {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.comparingInt(o -> sec[o]));
+        pq.add(N);  // 시작점 N 삽입
+        sec[N] = 0;  // N의 거리 초기화
 
-        Location curLocation;
-        int mvIndex, mvSec;
-        while (!pq.isEmpty()) {
-            System.out.println(pq);
-            curLocation = pq.poll();
-            // 두 배
-            mvIndex = curLocation.index * 2;
-            if (curLocation.index <= K && mvIndex <= DIV && curLocation.sec < sec[mvIndex]) {
-                sec[mvIndex] = curLocation.sec;
-                pq.add(new Location(mvIndex, curLocation.sec));
+        int curIndex;
+        while(!pq.isEmpty()) {
+            // System.out.println(pq);
+            curIndex = pq.poll();
+
+            if(curIndex * 2 <= DIV && curIndex * 2 <= K + N && sec[curIndex] < sec[curIndex * 2]) {
+                sec[curIndex * 2] = sec[curIndex];
+                pq.add(curIndex * 2);
             }
-            // 한번 이동
-            mvSec = curLocation.sec + 1;
-            mvIndex = curLocation.index - 1;
-            if (0 <= mvIndex && mvSec < sec[mvIndex]) {
-                sec[mvIndex] = mvSec;
-                pq.add(new Location(mvIndex, mvSec));
+            if(curIndex + 1 <= K && sec[curIndex] < sec[curIndex + 1]) {
+                sec[curIndex + 1] = sec[curIndex] + 1;
+                pq.add(curIndex + 1);
             }
-            mvIndex = curLocation.index + 1;
-            if (mvIndex <= K && mvSec < sec[mvIndex]) {
-                sec[mvIndex] = mvSec;
-                pq.add(new Location(mvIndex, mvSec));
+
+            if (0 <= curIndex - 1 && sec[curIndex] + 1 < sec[curIndex - 1]) {
+                sec[curIndex - 1] = sec[curIndex] + 1;
+                pq.add(curIndex - 1);
             }
         }
+
+        /*
+        System.out.println("{");
+        for (int i = 0; i <= K + N; i++) {
+            System.out.println("\t" + i + ": " + sec[i] + "초");
+        }
+        System.out.println("}");
+         */
+
     }
 }
