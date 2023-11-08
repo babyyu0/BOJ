@@ -5,68 +5,64 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.HashMap;
-import java.util.Stack;
 
 public class BJ05639_이진검색트리 {
+    private static class Node {
+        public Node(long value) {
+            this.value = value; this.left = this.right = null;
+        }
 
-    private static BufferedReader br;
+        long value;
+        Node left, right;
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "value=" + value +
+                    ", left=" + left +
+                    ", right=" + right +
+                    '}';
+        }
+    }
+
     private static StringBuilder sb;
-    private static Stack<Long> stack;
-
-
     public static void main(String[] args) throws IOException {
-        br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         sb = new StringBuilder();
-        map = new HashMap<>();
-        stack = new Stack<>();
 
-        stack.add((long) Math.pow(10, 6));
-        stack.add(Long.parseLong(br.readLine()));
-        dfs();
-
-        while (stack.size() != 1) {
-            sb.append(stack.pop()).append("\n");
+        Node root = null; String num;
+        while ((num = br.readLine()) != null && !num.isEmpty()) {
+            root = insert(root, Long.parseLong(num));
         }
+
+        print(root);
+
         bw.append(sb.toString());
         bw.flush();
         bw.close();
         br.close();
     }
 
-    private static void dfs() throws IOException {
-        String str = br.readLine();
-        if (str == null || str.isEmpty()) {
-            return;
+    private static Node insert(Node root, long value) {
+        if(root == null) {
+            return new Node(value);
         }
-        long num = Long.parseLong(str);
-        if (stack.peek() > num) {  // 왼쪽 노드일 경우
-            // System.out.println(num + " 진입 1");
-            // beforeIndex *= 2;
-            // map.put(beforeIndex, num);
-            stack.add(num);
-            // MAX = Math.max(MAX, beforeIndex);
-            dfs();
+
+        if(value < root.value) {  // 왼쪽 노드일 경우
+            root.left = insert(root.left, value);
         } else {
-            // System.out.println(num + " 진입 2");
-            while (true) {
-                long tmp = stack.pop();
-                // System.out.println(num + "과 인덱스 [" + beforeIndex + "] 비교");
-                if (stack.peek() > num) {
-                    // beforeIndex = beforeIndex * 2 + 1;
-                    // map.put(beforeIndex, num);
-                    stack.add(tmp);
-                    stack.add(num);
-                    break;
-                } else {
-                    sb.append(tmp).append("\n");
-                    // System.out.println("stack : " + tmp);
-                    // beforeIndex /= 2;
-                }
-            }
-            dfs();
+            root.right = insert(root.right, value);
         }
+
+        return root;
+    }
+
+    private static void print(Node root) {
+        if(root.left != null) print(root.left);
+        if(root.right != null) print(root.right);
+        sb.append(root.value).append("\n");
+
     }
 }
 
