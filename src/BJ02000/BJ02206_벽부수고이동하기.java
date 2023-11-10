@@ -8,12 +8,16 @@ import java.util.StringTokenizer;
 
 // 시작점과 끝점은 항상 0
 public class BJ02206_벽부수고이동하기 {
+
     private static class Road implements Comparable<Road> {
-        private Road (int r, int c, int depth, int crashed) {
-            this.r = r; this.c = c;  // 현재 위치한 열과 행
+
+        private Road(int r, int c, int depth, int crashed) {
+            this.r = r;
+            this.c = c;  // 현재 위치한 열과 행
             this.depth = depth;  //
             this.crashed = crashed;
         }
+
         int r, c, depth, crashed;
 
         @Override
@@ -28,15 +32,25 @@ public class BJ02206_벽부수고이동하기 {
 
         @Override
         public int compareTo(Road r) {
-            if(this.depth < r.depth) return -1;
-            else if(r.depth < this.depth) return 1;
-            else if(this.r < r.r) return 1;
-            else if(r.r < this.r) return -1;
-            else if(this.c < r.c) return 1;
-            else if(r.c < this.c) return -1;
-            else if(this.crashed < r.crashed) return -1;
-            else if(r.crashed < this.crashed) return 1;
-            else return 0;
+            if (this.depth < r.depth) {
+                return -1;
+            } else if (r.depth < this.depth) {
+                return 1;
+            } else if (this.r < r.r) {
+                return 1;
+            } else if (r.r < this.r) {
+                return -1;
+            } else if (this.c < r.c) {
+                return 1;
+            } else if (r.c < this.c) {
+                return -1;
+            } else if (this.crashed < r.crashed) {
+                return -1;
+            } else if (r.crashed < this.crashed) {
+                return 1;
+            } else {
+                return 0;
+            }
         }
     }
 
@@ -62,74 +76,40 @@ public class BJ02206_벽부수고이동하기 {
             }
         }
 
-        if(N == 1 && M == 1) {
+        if (N == 1 && M == 1) {
             System.out.println(1);
             return;
         }
 
         move[0][0] = new Road(0, 0, 1, 0);
-
-        /*
-        for (int r = 0; r < N; r++) {
-            for (int c = 0; c < M; c++) {
-                if(move[r][c] == null) System.out.print("-1\t");
-                else System.out.print(move[r][c].depth + "\t");
-            }
-            System.out.println();
-        }
-        */
-        // findShortest(move[0][0]);
         System.out.println(findShortest2());
-
-        /*
-        for (int r = 0; r < N; r++) {
-            for (int c = 0; c < M; c++) {
-                if(move[r][c] == null) System.out.print("-1\t");
-                else System.out.print(move[r][c].depth + "\t");
-            }
-            System.out.println();
-        }
-        System.out.println(move[N - 1][M -1] == null? -1:move[N - 1][M - 1].depth);
-         */
     }
-
-    private static void findShortest(Road curRoad) {
-        for (int i = 0; i < 4; i++) {
-            int mr = curRoad.r + dr[i];
-            int mc = curRoad.c + dc[i];
-            if(0 <= mr && mr < N && 0 <= mc && mc < M
-                    && curRoad.crashed + roads[mr][mc] < 2 && (move[mr][mc] == null || curRoad.compareTo(move[mr][mc]) < 1)) {
-                // System.out.println("[" + mr + "][" + mc + "] 방문");
-                move[mr][mc] = new Road(mr, mc, curRoad.depth + 1, curRoad.crashed + roads[mr][mc]);
-                if(mr == N - 1 && mc == M - 1) return;
-                findShortest(move[mr][mc]);
-            }
-        }
-    }
-
 
     private static int findShortest2() {
         PriorityQueue<Road> queue = new PriorityQueue<>();
         queue.add(move[0][0]);
 
-        Road curRoad; int mr, mc;
-        while(!queue.isEmpty()) {
+        Road curRoad;
+        int mr, mc;
+        while (!queue.isEmpty()) {
             // System.out.println(queue);
             curRoad = queue.poll();
 
             for (int i = 0; i < 4; i++) {
                 mr = curRoad.r + dr[i];
                 mc = curRoad.c + dc[i];
-                if(mr < 0 || N <= mr || mc < 0 || M <= mc) {  // 배열을 벗어난 경우 continue
+                if (mr < 0 || N <= mr || mc < 0 || M <= mc) {  // 배열을 벗어난 경우 continue
                     continue;
-                } else if(1 < curRoad.crashed + roads[mr][mc]) {  // 벽에 두번째 막힌 경우 continue
+                } else if (1 < curRoad.crashed + roads[mr][mc]) {  // 벽에 두번째 막힌 경우 continue
                     continue;
-                } else if(move[mr][mc] != null && move[mr][mc].depth <= curRoad.depth + 1 && move[mr][mc].crashed <= curRoad.crashed + roads[mr][mc]) {  // 현재 이동하려는 경로보다 depth가 작을 경우 continue
+                } else if (move[mr][mc] != null && move[mr][mc].depth <= curRoad.depth + 1
+                        && move[mr][mc].crashed <= curRoad.crashed
+                        + roads[mr][mc]) {  // 현재 이동하려는 경로보다 depth가 작을 경우 continue
                     continue;
                 }
 
                 move[mr][mc] = new Road(mr, mc, curRoad.depth + 1, curRoad.crashed + roads[mr][mc]);
-                if(mr == N -1 && mc == M -1) {  // 목적지일 경우
+                if (mr == N - 1 && mc == M - 1) {  // 목적지일 경우
                     return move[mr][mc].depth;
                 }
                 queue.add(move[mr][mc]);
