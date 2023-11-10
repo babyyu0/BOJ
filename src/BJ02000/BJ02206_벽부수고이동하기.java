@@ -9,7 +9,73 @@ import java.util.StringTokenizer;
 // 시작점과 끝점은 항상 0
 public class BJ02206_벽부수고이동하기 {
 
+    private static final int[] dr = {-1, 1, 0, 0}, dc = {0, 0, -1, 1};
+    private static int N, M; // 열, 행
+    private static int[][] roads;
+    private static Road[][] move;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());  // 열 받기
+        M = Integer.parseInt(st.nextToken());  // 행 받기
+
+        roads = new int[N][M];  // 벽 있는지 저장할 맵 만들기
+        move = new Road[N][M];  // 이동 저장할 맵 만들기
+
+        String road;
+        for (int r = 0; r < N; r++) {
+            road = br.readLine();
+            for (int c = 0; c < M; c++) {
+                roads[r][c] = road.charAt(c) - '0';  // 벽이면 true, 아니면 false
+            }
+        }
+
+        if (N == 1 && M == 1) {
+            System.out.println(1);
+            return;
+        }
+
+        move[0][0] = new Road(0, 0, 1, 0);
+        System.out.println(findShortest());
+    }
+
+    private static int findShortest() {
+        PriorityQueue<Road> queue = new PriorityQueue<>();
+        queue.add(move[0][0]);
+
+        Road curRoad;
+        int mr, mc;
+        while (!queue.isEmpty()) {
+            // System.out.println(queue);
+            curRoad = queue.poll();
+
+            for (int i = 0; i < 4; i++) {
+                mr = curRoad.r + dr[i];
+                mc = curRoad.c + dc[i];
+                if (mr < 0 || N <= mr || mc < 0 || M <= mc) {  // 배열을 벗어난 경우 continue
+                    continue;
+                } else if (1 < curRoad.crashed + roads[mr][mc]) {  // 벽에 두번째 막힌 경우 continue
+                    continue;
+                } else if (move[mr][mc] != null && move[mr][mc].depth <= curRoad.depth + 1
+                        && move[mr][mc].crashed <= curRoad.crashed
+                        + roads[mr][mc]) {  // 현재 이동하려는 경로보다 depth가 작을 경우 continue
+                    continue;
+                }
+
+                move[mr][mc] = new Road(mr, mc, curRoad.depth + 1, curRoad.crashed + roads[mr][mc]);
+                if (mr == N - 1 && mc == M - 1) {  // 목적지일 경우
+                    return move[mr][mc].depth;
+                }
+                queue.add(move[mr][mc]);
+            }
+        }
+        return -1;
+    }
+
     private static class Road implements Comparable<Road> {
+
+        int r, c, depth, crashed;
 
         private Road(int r, int c, int depth, int crashed) {
             this.r = r;
@@ -17,8 +83,6 @@ public class BJ02206_벽부수고이동하기 {
             this.depth = depth;  //
             this.crashed = crashed;
         }
-
-        int r, c, depth, crashed;
 
         @Override
         public String toString() {
@@ -52,69 +116,5 @@ public class BJ02206_벽부수고이동하기 {
                 return 0;
             }
         }
-    }
-
-    private static int N, M; // 열, 행
-    private static int[][] roads;
-    private static Road[][] move;
-    private static final int[] dr = {-1, 1, 0, 0}, dc = {0, 0, -1, 1};
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());  // 열 받기
-        M = Integer.parseInt(st.nextToken());  // 행 받기
-
-        roads = new int[N][M];  // 벽 있는지 저장할 맵 만들기
-        move = new Road[N][M];  // 이동 저장할 맵 만들기
-
-        String road;
-        for (int r = 0; r < N; r++) {
-            road = br.readLine();
-            for (int c = 0; c < M; c++) {
-                roads[r][c] = road.charAt(c) - '0';  // 벽이면 true, 아니면 false
-            }
-        }
-
-        if (N == 1 && M == 1) {
-            System.out.println(1);
-            return;
-        }
-
-        move[0][0] = new Road(0, 0, 1, 0);
-        System.out.println(findShortest2());
-    }
-
-    private static int findShortest2() {
-        PriorityQueue<Road> queue = new PriorityQueue<>();
-        queue.add(move[0][0]);
-
-        Road curRoad;
-        int mr, mc;
-        while (!queue.isEmpty()) {
-            // System.out.println(queue);
-            curRoad = queue.poll();
-
-            for (int i = 0; i < 4; i++) {
-                mr = curRoad.r + dr[i];
-                mc = curRoad.c + dc[i];
-                if (mr < 0 || N <= mr || mc < 0 || M <= mc) {  // 배열을 벗어난 경우 continue
-                    continue;
-                } else if (1 < curRoad.crashed + roads[mr][mc]) {  // 벽에 두번째 막힌 경우 continue
-                    continue;
-                } else if (move[mr][mc] != null && move[mr][mc].depth <= curRoad.depth + 1
-                        && move[mr][mc].crashed <= curRoad.crashed
-                        + roads[mr][mc]) {  // 현재 이동하려는 경로보다 depth가 작을 경우 continue
-                    continue;
-                }
-
-                move[mr][mc] = new Road(mr, mc, curRoad.depth + 1, curRoad.crashed + roads[mr][mc]);
-                if (mr == N - 1 && mc == M - 1) {  // 목적지일 경우
-                    return move[mr][mc].depth;
-                }
-                queue.add(move[mr][mc]);
-            }
-        }
-        return -1;
     }
 }
