@@ -19,10 +19,10 @@ public class BJ01202_보석도둑 {
 
         @Override
         public int compareTo(Jewel o) {
-            if(this.V == o.V) {
-                return Long.compare(o.M, this.M);
+            if (this.M == o.M) {
+                return Long.compare(o.V, this.V);
             }
-            return Long.compare(o.V, this.V);
+            return Long.compare(this.M, o.M);
         }
 
         @Override
@@ -48,27 +48,32 @@ public class BJ01202_보석도둑 {
         jewels = new Jewel[N];
         bags = new long[K];
 
-        PriorityQueue<Jewel> pq = new PriorityQueue<>();
         for (int i = 0; i < N; i++) {  // 보석 담기
             st = new StringTokenizer(br.readLine());
             jewels[i] = new Jewel(i, Long.parseLong(st.nextToken()), Long.parseLong(st.nextToken()));
-            pq.add(jewels[i]);
         }
         Arrays.sort(jewels);
+
         
         for (int i = 0; i < K; i++) {  // 가방 크기 담기
             bags[i] = Long.parseLong(br.readLine());
         }
         Arrays.sort(bags);
 
-        long sum = 0; Jewel jewel; int i = K - 1;
-        boolean[] visited = new boolean[K];
-        while(!pq.isEmpty() && 0 <= i) {
-            jewel = pq.poll();
-            // System.out.println(bags[i] + "가방 살펴보기");
-            if(jewel.M <= bags[i]) {
-                i--;
-                sum += jewel.V;
+        long sum = 0;
+        PriorityQueue<Jewel> pq = new PriorityQueue<>((o1, o2) -> {
+            if (o1.V == o2.V) {
+                return Long.compare(o2.M, o1.M);
+            }
+            return Long.compare(o2.V, o1.V);
+        });
+        for (int i = 0, j = 0; i < K; i++) {
+            for (; j < N && jewels[j].M <= bags[i]; j++) {
+                pq.add(jewels[j]);
+            }
+
+            if (!pq.isEmpty()) {
+                sum += pq.poll().V;
             }
         }
 
