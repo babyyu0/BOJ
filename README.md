@@ -13,3 +13,9 @@
 | [01024](https://www.acmicpc.net/problem/1024) |  수열의 합  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 /> | Done  |
 | [01058](https://www.acmicpc.net/problem/1058) |   친구    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 /> | Done  |
 | [01138](https://www.acmicpc.net/problem/1138) | 한 줄로 서기 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 /> | Done  |
+
+### 🞷 Gold
+
+|                     문제 번호                      | 문제 이름  |                                   난이도                                    | 풀이 여부 |
+|:----------------------------------------------:|:------:|:------------------------------------------------------------------------:|:-----:|
+| [14503](https://www.acmicpc.net/problem/14503) | 로봇 청소기 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
