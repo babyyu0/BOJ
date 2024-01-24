@@ -24,4 +24,5 @@
 |:----------------------------------------------:|:------:|:------------------------------------------------------------------------:|:-----:|
 | [01717](https://www.acmicpc.net/problem/1717)  | 집합의 표현 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [02293](https://www.acmicpc.net/problem/2293)  |  동전 1  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [02294](https://www.acmicpc.net/problem/2294)  |  동전 2  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [14503](https://www.acmicpc.net/problem/14503) | 로봇 청소기 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
