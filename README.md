@@ -13,6 +13,7 @@
 | [01024](https://www.acmicpc.net/problem/1024)  |  수열의 합  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [01057](https://www.acmicpc.net/problem/1057)  |  토너먼트   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
 | [01058](https://www.acmicpc.net/problem/1058)  |   친구    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| [01059](https://www.acmicpc.net/problem/1059)  |  좋은 구간  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
 | [01138](https://www.acmicpc.net/problem/1138)  | 한 줄로 서기 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [01182](https://www.acmicpc.net/problem/1182)  | 부분수열의 합 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [02156](https://www.acmicpc.net/problem/2156)  | 포도주 시식  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
