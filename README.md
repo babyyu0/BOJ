@@ -25,10 +25,11 @@
 
 ### 🞷 Gold
 
-|                     문제 번호                      | 문제 이름  |                                   난이도                                    | 풀이 여부 |
-|:----------------------------------------------:|:------:|:------------------------------------------------------------------------:|:-----:|
-| [01717](https://www.acmicpc.net/problem/1717)  | 집합의 표현 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-| [02293](https://www.acmicpc.net/problem/2293)  |  동전 1  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-| [02294](https://www.acmicpc.net/problem/2294)  |  동전 2  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-| [14503](https://www.acmicpc.net/problem/14503) | 로봇 청소기 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-| [14891](https://www.acmicpc.net/problem/14891) |  톱니바퀴  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                     문제 번호                      |  문제 이름  |                                   난이도                                    | 풀이 여부 |
+|:----------------------------------------------:|:-------:|:------------------------------------------------------------------------:|:-----:|
+| [01717](https://www.acmicpc.net/problem/1717)  | 집합의 표현  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [02293](https://www.acmicpc.net/problem/2293)  |  동전 1   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [02294](https://www.acmicpc.net/problem/2294)  |  동전 2   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [14503](https://www.acmicpc.net/problem/14503) | 로봇 청소기  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [14891](https://www.acmicpc.net/problem/14891) |  톱니바퀴   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [17404](https://www.acmicpc.net/problem/17404) | RGB거리 2 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
