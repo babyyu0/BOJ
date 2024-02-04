@@ -24,6 +24,7 @@
 | [04963](https://www.acmicpc.net/problem/4963)  |  섬의 개수  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [10799](https://www.acmicpc.net/problem/10799) |  쇠막대기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [10844](https://www.acmicpc.net/problem/10844) | 쉬운 계단 수 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| [10974](https://www.acmicpc.net/problem/10974) |  모든 순열  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
 | [14501](https://www.acmicpc.net/problem/14501) |   퇴사    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
 | [18258](https://www.acmicpc.net/problem/18258) |   큐 2   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
 
