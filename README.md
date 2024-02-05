@@ -20,6 +20,7 @@
 | [01182](https://www.acmicpc.net/problem/1182)  | 부분수열의 합 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [02156](https://www.acmicpc.net/problem/2156)  | 포도주 시식  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | [02193](https://www.acmicpc.net/problem/2193)  |   이친수   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
+| [02468](https://www.acmicpc.net/problem/2468)  |  안전 영역  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | [03036](https://www.acmicpc.net/problem/3036)  |    링    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
 | [04963](https://www.acmicpc.net/problem/4963)  |  섬의 개수  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [10799](https://www.acmicpc.net/problem/10799) |  쇠막대기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
