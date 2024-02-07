@@ -23,6 +23,7 @@
 | [02468](https://www.acmicpc.net/problem/2468)  |  안전 영역  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | [03036](https://www.acmicpc.net/problem/3036)  |    링    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
 | [04963](https://www.acmicpc.net/problem/4963)  |  섬의 개수  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| [07562](https://www.acmicpc.net/problem/7562)  | 나이트의 이동 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | [10799](https://www.acmicpc.net/problem/10799) |  쇠막대기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | [10844](https://www.acmicpc.net/problem/10844) | 쉬운 계단 수 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | [10974](https://www.acmicpc.net/problem/10974) |  모든 순열  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
