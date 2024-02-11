@@ -21,10 +21,10 @@ public class BJ02470_두용액 {
         Arrays.sort(numbers);
 
         long compNum;
-        long MIN = 200000;
+        long MIN = 2000000001;
         long[] selected = new long[2];
         for (int i = 0; i < numbers.length; i++) {
-            compNum = binarySearch(numbers[i], 0, numbers.length - 1);
+            compNum = binarySearch(i, 0, numbers.length - 1);
             //System.out.println(numbers[i] + "와 " + compNum + "이 제일 적게 차이 남");
 
             if (Math.abs(compNum + numbers[i]) < MIN) {
@@ -37,19 +37,21 @@ public class BJ02470_두용액 {
         System.out.println(selected[0] + " " + selected[1]);
     }
 
-    private static long binarySearch(long N, int start, int end) {
+    private static long binarySearch(int i, int start, int end) {
         int calIndex = (start + end) / 2;
 
-        //System.out.println("비교 기준인 " + (-N) + "과 " + numbers[start] + " ~ " + numbers[end] + " 사이의 값 " + numbers[calIndex] + "를 비교");
+        //System.out.println("비교 기준인 " + (-numbers[i]) + "과 " + numbers[start] + " ~ " + numbers[end] + " 사이의 값 " + numbers[calIndex] + "를 비교");
         if (end - start <= 1) {
-            return numbers[start] == N ? numbers[end] : numbers[start];
-        } else if (numbers[calIndex] == N) {
-            if (N < 0) return binarySearch(N, start + 1, end);
-            else return binarySearch(N, start, end - 1);
-        } else if (-N < numbers[calIndex]) {
-            return binarySearch(N, start, calIndex);
-        } else if (numbers[calIndex] < -N) {
-            return binarySearch(N, calIndex, end);
+            if ((Math.abs(numbers[i] + numbers[start]) < Math.abs(numbers[i] + numbers[end]) && start != i) || end == i) {
+                return numbers[start];
+            } else return numbers[end];
+        } else if (calIndex == i) {
+            if (numbers[i] < 0) return binarySearch(i, start, calIndex);
+            else return binarySearch(i, calIndex, end);
+        } else if (-numbers[i] < numbers[calIndex]) {
+            return binarySearch(i, start, calIndex);
+        } else if (numbers[calIndex] < -numbers[i]) {
+            return binarySearch(i, calIndex, end);
         }
 
         return numbers[calIndex];
