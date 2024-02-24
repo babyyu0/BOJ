@@ -38,8 +38,8 @@ public class BJ01946_신입사원 {
             for (int i = N - 2; 0 <= i; i--) {
                 if(scores[i].interview > scores[i + 1].interview) {
                     MAX_PASS--;
+                    scores[i].interview = Math.min(scores[i].interview, scores[i + 1].interview);
                 }
-                scores[i].interview = Math.min(scores[i].interview, scores[i + 1].interview);
             }
 
             sb.append(MAX_PASS).append("\n");
