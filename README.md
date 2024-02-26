@@ -8,32 +8,33 @@
 
 ### 🞷 Silver
 
-| 문제 번호 |  문제 이름  |                                   난이도                                    | 풀이 여부 |
-|:-----:|:-------:|:------------------------------------------------------------------------:|:-----:|
-| 01021 | 회전하는 큐  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
-| 01024 |  수열의 합  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
-| 01057 |  토너먼트   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
-| 01058 |   친구    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
-| 01059 |  좋은 구간  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
-| 01120 |   문자열   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
-| 01138 | 한 줄로 서기 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
-| 01182 | 부분수열의 합 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
-| 01946 |  신입 사원  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 02156 | 포도주 시식  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 02193 |   이친수   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
-| 02217 |   로프    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
-| 02468 |  안전 영역  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 02583 | 영역 구하기  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 03036 |    링    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
-| 04963 |  섬의 개수  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
-| 07562 | 나이트의 이동 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 10799 |  쇠막대기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
-| 10844 | 쉬운 계단 수 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 10974 |  모든 순열  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
-| 11052 | 카드 구매하기 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 11057 |  오르막 수  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
-| 14501 |   퇴사    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
-| 18258 |   큐 2   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
+| 문제 번호 |  문제 이름   |                                   난이도                                    | 풀이 여부 |
+|:-----:|:--------:|:------------------------------------------------------------------------:|:-----:|
+| 01021 |  회전하는 큐  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
+| 01024 |  수열의 합   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| 01057 |   토너먼트   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
+| 01058 |    친구    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| 01059 |  좋은 구간   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
+| 01120 |   문자열    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
+| 01138 | 한 줄로 서기  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| 01182 | 부분수열의 합  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| 01946 |  신입 사원   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 02156 |  포도주 시식  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 02193 |   이친수    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
+| 02217 |    로프    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
+| 02468 |  안전 영역   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 02583 |  영역 구하기  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 03036 |    링     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
+| 04963 |  섬의 개수   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| 07562 | 나이트의 이동  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 10799 |   쇠막대기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| 10844 | 쉬운 계단 수  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 10974 |  모든 순열   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
+| 11052 | 카드 구매하기  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 11057 |  오르막 수   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
+| 14501 |    퇴사    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
+| 15655 | N과 M (6) | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
+| 18258 |   큐 2    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
 
 ### 🞷 Gold
 
