@@ -38,26 +38,27 @@
 
 ### 🞷 Gold
 
-|                  문제 번호                  |   문제 이름   |                                   난이도                                    | 풀이 여부 |
-|:---------------------------------------:|:---------:|:------------------------------------------------------------------------:|:-----:|
-| [01005](https://babyyu0.tistory.com/8)  | ACM Craft | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  1068                   |    트리     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-| [01520](https://babyyu0.tistory.com/5)  |   내리막 길   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  01717                  |  집합의 표현   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-|                  01806                  |    부분합    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
-| [02146](https://babyyu0.tistory.com/17) |  다리 만들기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  02225                  |    합분해    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-| [02252](https://babyyu0.tistory.com/3)  |   줄 세우기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  02293                  |   동전 1    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-|                  02294                  |   동전 2    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-|                  02470                  |   두 용액    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-|                  02565                  |    전깃줄    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-|                  03190                  |     뱀     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
-| [09466](https://babyyu0.tistory.com/13) |  텀 프로젝트   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-| [11049](https://babyyu0.tistory.com/14) | 행렬 곱셈 순서  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-| [11066](https://babyyu0.tistory.com/15) |  파일 합치기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  14503                  |  로봇 청소기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-| [14890](https://babyyu0.tistory.com/9)  |    경사로    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  14891                  |   톱니바퀴    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
-|                  17298                  |    오큰수    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
-|                  17404                  |  RGB거리 2  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
+|                  문제 번호                  |   문제 이름    |                                   난이도                                    | 풀이 여부 |
+|:---------------------------------------:|:----------:|:------------------------------------------------------------------------:|:-----:|
+| [01005](https://babyyu0.tistory.com/8)  | ACM Craft  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  1068                   |     트리     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [01520](https://babyyu0.tistory.com/5)  |   내리막 길    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  01717                  |   집합의 표현   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  01806                  |    부분합     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
+| [01937](https://babyyu0.tistory.com/21) | 욕심쟁이 판다 🐼 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+| [02146](https://babyyu0.tistory.com/17) |   다리 만들기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  02225                  |    합분해     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [02252](https://babyyu0.tistory.com/3)  |   줄 세우기    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  02293                  |    동전 1    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  02294                  |    동전 2    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  02470                  |    두 용액    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  02565                  |    전깃줄     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  03190                  |     뱀      | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
+| [09466](https://babyyu0.tistory.com/13) |   텀 프로젝트   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+| [11049](https://babyyu0.tistory.com/14) |  행렬 곱셈 순서  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+| [11066](https://babyyu0.tistory.com/15) |   파일 합치기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  14503                  |   로봇 청소기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [14890](https://babyyu0.tistory.com/9)  |    경사로     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  14891                  |    톱니바퀴    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  17298                  |    오큰수     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
+|                  17404                  |  RGB거리 2   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
