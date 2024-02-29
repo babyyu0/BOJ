@@ -60,5 +60,6 @@
 |                  14503                  |   로봇 청소기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [14890](https://babyyu0.tistory.com/9)  |    경사로     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  14891                  |    톱니바퀴    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+| [15684](https://babyyu0.tistory.com/23) |   사다리 조작   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  17298                  |    오큰수     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  17404                  |  RGB거리 2   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
