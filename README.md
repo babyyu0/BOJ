@@ -18,6 +18,7 @@
 | 01120 |   문자열    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/7.svg" width=20 />  | Done  |
 | 01138 | 한 줄로 서기  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
 | 01182 | 부분수열의 합  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/9.svg" width=20 />  | Done  |
+| 01309 |   동물원    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | 01946 |  신입 사원   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | 02156 |  포도주 시식  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/10.svg" width=20 /> | Done  |
 | 02193 |   이친수    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/8.svg" width=20 />  | Done  |
