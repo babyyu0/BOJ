@@ -55,6 +55,7 @@
 |                  02293                  |    동전 1    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02294                  |    동전 2    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02470                  |    두 용액    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  02504                  |   괄호의 값    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02565                  |    전깃줄     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  03190                  |     뱀      | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [09466](https://babyyu0.tistory.com/13) |   텀 프로젝트   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
