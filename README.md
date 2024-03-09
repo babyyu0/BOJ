@@ -57,6 +57,7 @@
 |                  02470                  |    두 용액    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02504                  |   괄호의 값    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02565                  |    전깃줄     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  02589                  |    보물섬     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  03190                  |     뱀      | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [09466](https://babyyu0.tistory.com/13) |   텀 프로젝트   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [11049](https://babyyu0.tistory.com/14) |  행렬 곱셈 순서  | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
