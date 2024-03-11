@@ -50,6 +50,7 @@
 |                  01717                  |   집합의 표현   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  01806                  |    부분합     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [01937](https://babyyu0.tistory.com/21) | 욕심쟁이 판다 🐼 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+| [02110](https://babyyu0.tistory.com/27) |   공유기 설치   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [02146](https://babyyu0.tistory.com/17) |   다리 만들기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  02225                  |    합분해     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [02252](https://babyyu0.tistory.com/3)  |   줄 세우기    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |

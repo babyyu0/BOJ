@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class BJ02110_공유기설치 {
-    private static int N, C, MIN_DIST;
+    private static int N, C;
     private static int[] houses;
 
     public static void main(String[] args) throws IOException {
