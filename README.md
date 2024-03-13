@@ -69,5 +69,6 @@
 |                  14891                  |    톱니바퀴    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [15684](https://babyyu0.tistory.com/23) |   사다리 조작   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [15685](https://babyyu0.tistory.com/25) |   드래곤 커브   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+| [16235](https://babyyu0.tistory.com/30) |   나무 재테크   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  17298                  |    오큰수     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  17404                  |  RGB거리 2   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
