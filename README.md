@@ -47,6 +47,7 @@
 |                  1068                   |     트리     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [01520](https://babyyu0.tistory.com/5)  |   내리막 길    | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [01600](https://babyyu0.tistory.com/26) | 말이 되고픈 원숭이 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  01715                  |  카드 정렬하기   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  01717                  |   집합의 표현   | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  01806                  |    부분합     | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [01937](https://babyyu0.tistory.com/21) | 욕심쟁이 판다 🐼 | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
