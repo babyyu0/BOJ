@@ -6,10 +6,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class BJ17135_캐슬디펜스 {
-    private static int N, M, D;  // 행의 수 N, 열의 수 M, 공격 거리 제한 D
-    private static int[] COUNT;
-    private static int[][] map;
-    private static final int[] dc = {-1, 0, 1};
+    private static int N, M, D, MAX_SUM;  // 행의 수 N, 열의 수 M, 공격 거리 제한 D
+    private static int[][] map, visited;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -19,7 +17,6 @@ public class BJ17135_캐슬디펜스 {
         D = Integer.parseInt(st.nextToken());
 
         map = new int[N][M];
-        COUNT = new int[3];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < M; j++) {
@@ -27,54 +24,44 @@ public class BJ17135_캐슬디펜스 {
             }
         }
 
-        int MAX_SUM = 0;
-        boolean[][][] visited;
-        for (int i = 0; i < M; i++) {
-            visited = catchEnemy(i, 0, new boolean[N][M][3]);
-            System.out.println();
-            for (int j = i + 1; j < M; j--) {
-                visited = catchEnemy(i, 1, visited);
-                for (int k = j + 1; k < M; k--) {
-                    visited = catchEnemy(i, 2, visited);
-                }
-            }
-        }
-
+        combination(0, 0, new int[3]);  // 궁수의 위치 선택
         System.out.println(MAX_SUM);
     }
 
-    private static boolean[][][] catchEnemy(int archer, int num, boolean[][][] visited) {
-        int nr, nc; boolean flag;
-        for (int i = N - 1; 0 <= i; i--) {
-            // 거리 계산
-            System.out.printf("====== %d 열 시작 ======\n", i);
-            for (int j = 0; j < D; j++) {
-                if (i - j < 0) continue;
-                for (int k = -D + j + 1; k < D - j; k++) {
-                    if(archer + k < 0 || N <= archer + k)  continue;
-                    nr = i - j;
-                    nc = archer + k;
-                    System.out.printf("(%2d, %2d) 탐색\n", nr, nc);
+    private static void combination(int start, int count, int[] archers) {
+        if (count == 3) {  // 궁수의 위치가 선택되었을 때
+            visited = new int[N][M];  // 방문 배열 초기화
+            count = 0;
+            for (int i = N - 1; 0 <= i; i--) {
+                count += shoot(i, archers);  // 적이 다가오며 게임 진행
+            }
+            MAX_SUM = Math.max(MAX_SUM, count);
+            return;
+        }
+        for (int i = start; i < M; i++) {
+            archers[count] = i;
+            combination(i + 1, count + 1, archers);
+        }
+    }
 
-                    if(map[nr][nc] == 1 && !visited[nr][nc][num]) {
-                        flag = false;
-                        for (int l = 0; l < num; l++) {
-                            if(visited[nr][nc][l]) {
-                                flag = true;
-                                break;
-                            }
-                        }
+    private static int shoot(int r, int[] archers) {  // 해당 라운드에서 쏠 수 있는 적 count
+        int nr, nc, count = 0;
+        for (int i = 0; i < 3; i++) {  // 궁수 3명 탐색
+            for (int j = 0; j < D; j++) {  // 발사 가능한 거리가 짧은 순부터 탐색
+                for (int k = -j; k <= j; k++) {  // 왼쪽부터 탐색
+                    nr = r - (j - Math.abs(k));  // 행 계산
+                    nc = archers[i] + k;  // 열 계산
 
-                        if(!flag) {  // 적을 잡을 수 있을 경우
-                            visited[nr][nc][num] = true;
-                            System.out.printf("(%2d, %2d)에 위치한 적을 %2d번 궁수가 잡다.\n", nr, nc, num + 1);
-                            j = D;
-                            break;
-                        }
+                    if (0 <= nr && nr < N && 0 <= nc && nc < M && map[nr][nc] == 1
+                            && (visited[nr][nc] == 0 || visited[nr][nc] == r + 2)) {  // 방문 가능할 경우 (동시 발사 고려)
+                        count += (visited[nr][nc] == 0) ? 1 : 0;  // 해당 라운드에서 이미 count한 적인지 판단
+                        visited[nr][nc] = r + 2;  // 방문 처리
+                        j = D;  // for문 두개 break용
+                        break;
                     }
                 }
             }
         }
-        return visited;
+        return count;
     }
 }
