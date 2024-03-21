@@ -59,6 +59,7 @@
 | [02252](https://babyyu0.tistory.com/3)  |            줄 세우기             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  02293                  |             동전 1             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02294                  |             동전 2             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  02467                  |              용액              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02470                  |             두 용액             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02504                  |            괄호의 값             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  02565                  |             전깃줄              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
