@@ -69,6 +69,7 @@
 | [09466](https://babyyu0.tistory.com/13) |            텀 프로젝트            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [11049](https://babyyu0.tistory.com/14) |           행렬 곱셈 순서           | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [11066](https://babyyu0.tistory.com/15) |            파일 합치기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  14499                  |            주사위 굴리기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  14503                  |            로봇 청소기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [14890](https://babyyu0.tistory.com/9)  |             경사로              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  14891                  |             톱니바퀴             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
