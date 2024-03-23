@@ -67,15 +67,16 @@
 |                  03190                  |              뱀               | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [04386](https://babyyu0.tistory.com/35) |           별자리 만들기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [09466](https://babyyu0.tistory.com/13) |            텀 프로젝트            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+| [11000](https://babyyu0.tistory.com/36) |            강의실 배정            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [11049](https://babyyu0.tistory.com/14) |           행렬 곱셈 순서           | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [11066](https://babyyu0.tistory.com/15) |            파일 합치기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  14499                  |            주사위 굴리기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
+|                  14499                  |           주사위 굴리기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  14503                  |            로봇 청소기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [14890](https://babyyu0.tistory.com/9)  |             경사로              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  14891                  |             톱니바퀴             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [15684](https://babyyu0.tistory.com/23) |            사다리 조작            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [15685](https://babyyu0.tistory.com/25) |            드래곤 커브            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
-|                  16234                  |            인구 이동            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
+|                  16234                  |            인구 이동             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [16235](https://babyyu0.tistory.com/30) |            나무 재테크            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [17135](https://babyyu0.tistory.com/33) |            캐슬 디펜스            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  17298                  |             오큰수              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
