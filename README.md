@@ -67,6 +67,7 @@
 |                  02589                  |             보물섬              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  03190                  |              뱀               | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [04386](https://babyyu0.tistory.com/35) |           별자리 만들기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  05493                  |            상범 빌딩             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [09466](https://babyyu0.tistory.com/13) |            텀 프로젝트            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [11000](https://babyyu0.tistory.com/36) |            강의실 배정            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [11049](https://babyyu0.tistory.com/14) |           행렬 곱셈 순서           | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
