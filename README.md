@@ -80,6 +80,7 @@
 | [14890](https://babyyu0.tistory.com/9)  |             경사로              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  14891                  |             톱니바퀴             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 |                  15486                  |             퇴사 2             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  15683                  |              감시              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [15684](https://babyyu0.tistory.com/23) |            사다리 조작            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [15685](https://babyyu0.tistory.com/25) |            드래곤 커브            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  16234                  |            인구 이동             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
