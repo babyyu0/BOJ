@@ -75,6 +75,7 @@
 | [11049](https://babyyu0.tistory.com/14) |           행렬 곱셈 순서           | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [11066](https://babyyu0.tistory.com/15) |            파일 합치기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  11758                  |             CCW              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                [12100](https://babyyu0.tistory.com/42)                |             2048             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/14.svg" width=20 /> | Done  |
 |                  14499                  |           주사위 굴리기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  14503                  |            로봇 청소기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [14719](https://babyyu0.tistory.com/37) |              빗물              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
