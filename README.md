@@ -54,6 +54,7 @@
 |                  01806                  |             부분합              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  01922                  |           네트워크 연결            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 | [01937](https://babyyu0.tistory.com/21) |          욕심쟁이 판다 🐼          | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
+|                  01976                  |            여행 가자             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  02011                  |             암호코드             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [02110](https://babyyu0.tistory.com/27) |            공유기 설치            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
 |                  02133                  |            타일 채우기            | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/12.svg" width=20 /> | Done  |
