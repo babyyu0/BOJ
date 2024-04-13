@@ -45,6 +45,7 @@
 |:---------------------------------------:|:----------------------------:|:------------------------------------------------------------------------:|:-----:|
 | [01005](https://babyyu0.tistory.com/8)  |          ACM Craft           | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  01011                  | Fly me to the Alpha Centauri | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
+|                  01022                  |        소용돌이 예쁘게 출력하기         | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 |                  01068                  |              트리              | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/11.svg" width=20 /> | Done  |
 | [01516](https://babyyu0.tistory.com/5)  |            게임 개발             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
 | [01520](https://babyyu0.tistory.com/5)  |            내리막 길             | <img src="https://d2gd6pc034wcta.cloudfront.net/tier/13.svg" width=20 /> | Done  |
