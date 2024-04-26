@@ -1,40 +1,58 @@
 package BJ17000;
 
 import java.io.*;
+import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class BJ17413_단어뒤집기2 {
+    private static Stack<Character> stack;
+    private static StringBuilder sb;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringBuilder sb = new StringBuilder();
+        sb = new StringBuilder();
+        String str = br.readLine();
+        stack = new Stack<>();
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
-        String[] strArr;
-        char[] charArr;
-        String str; int left, right;
-        while(st.hasMoreTokens()) {
-            strArr = st.nextToken().split("<");
-            charArr = st.nextToken().toCharArray();
-            for (int i = 0; i < charArr.length; i++) {
-                if(charArr[i] == '<') {
-                    while(charArr[i] != '>') {
-                        sb.append(charArr[i++]);
+        boolean flag = false;
+        int i = 0;
+        while(i < str.length()) {
+            switch (str.charAt(i)) {
+                case '<':
+                    flag = true;
+                    popWords();  // 글자 거꾸로 다 빼내기
+                    sb.append("<");
+                    break;
+                case '>':
+                    sb.append(">");
+                    flag = false;
+                    break;
+                case ' ':
+                    if(!flag) {
+                        popWords();  // 글자 거꾸로 다 빼내기
+                        sb.append(" ");
+                        break;
                     }
-                    sb.append(charArr[i]);
-                } else {
-                    while(i < )
-                }
+                default:
+                    if(flag) { // 괄호 안일 경우
+                        sb.append(str.charAt(i));
+                    } else {  // 괄호 밖일 경우
+                        stack.push(str.charAt(i));
+                    }
             }
-
-
-            sb.append(" ");
+            i++;
         }
 
+        popWords();
         bw.append(sb.toString());
         bw.flush();
         bw.close();
         br.close();
+    }
+
+    private static void popWords() {
+        while(!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
     }
 }
